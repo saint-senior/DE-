@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS health_devices;
+CREATE DATABASE DROP DATABASE IF EXISTS health_devices;
+;

@@ -1,0 +1,6 @@
+WARNING:root:is when this event was logged.
+INFO:root:2025-10-07 15:58:10 - Program started
+INFO:root:2025-10-07 15:58:29 - Program started
+WARNING:root:is when this event was logged.
+2025-10-14 23:48:54,707 [INFO] __main__: Application starting up.
+2025-10-14 23:48:56,785 [INFO] __main__: Published blood pressure data. Subscribers: ['wearables/heart_rate/data/']

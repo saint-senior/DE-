@@ -1,0 +1,51 @@
+2025-10-14 11:23:57,218 [INFO] __main__: Application starting up.
+2025-10-14 11:23:57,219 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 11:24:16,800 [INFO] __main__: Application starting up.
+2025-10-14 11:24:16,800 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 11:31:23,119 [INFO] __main__: Application starting up.
+2025-10-14 11:31:23,119 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 11:43:20,184 [INFO] __main__: Application starting up.
+2025-10-14 11:43:20,184 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 14:34:48,156 [INFO] __main__: Application starting up.
+2025-10-14 14:34:48,158 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 14:34:50,446 [INFO] __main__: Application starting up.
+2025-10-14 14:34:50,447 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 14:35:02,572 [INFO] __main__: Application starting up.
+2025-10-14 14:35:02,572 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 14:56:03,531 [INFO] __main__: Application starting up.
+2025-10-14 14:56:03,700 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 14:56:34,660 [INFO] __main__: Application starting up.
+2025-10-14 14:56:34,805 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 14:56:58,926 [INFO] __main__: Application starting up.
+2025-10-14 14:56:59,035 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:00:14,852 [INFO] __main__: Application starting up.
+2025-10-14 15:00:14,881 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:00:15,918 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:00:15,918 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 15:00:43,372 [INFO] __main__: Application starting up.
+2025-10-14 15:00:43,398 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:00:44,443 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:00:44,443 [INFO] __main__: Published heart rate data. Subscribers: []
+2025-10-14 15:01:05,303 [INFO] __main__: Application starting up.
+2025-10-14 15:01:05,334 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:08:04,228 [INFO] __main__: Application starting up.
+2025-10-14 15:08:04,402 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:09:10,121 [INFO] __main__: Application starting up.
+2025-10-14 15:09:10,290 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:09:11,295 [INFO] __main__: Published heart rate data. Subscribers: <built-in method __dir__ of int object at 0xb37e88>
+2025-10-14 15:10:14,050 [INFO] __main__: Application starting up.
+2025-10-14 15:10:14,223 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:10:15,231 [INFO] __main__: Published heart rate data. Subscribers: ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'is_integer', 'numerator', 'real', 'to_bytes']
+2025-10-14 15:12:29,368 [INFO] __main__: Application starting up.
+2025-10-14 15:12:29,470 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:13:29,743 [INFO] __main__: Application starting up.
+2025-10-14 15:13:29,856 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-14 15:13:30,858 [INFO] __main__: Published heart rate data. Subscribers: ['89']
+2025-10-14 23:27:29,603 [INFO] __main__: Application starting up.
+2025-10-14 23:30:19,237 [INFO] __main__: Application starting up.
+2025-10-14 23:30:20,244 [INFO] __main__: Published blood pressure data. Subscribers: []
+2025-10-14 23:33:56,363 [INFO] __main__: Application starting up.
+2025-10-14 23:34:17,517 [INFO] __main__: Application starting up.
+2025-10-14 23:34:19,525 [INFO] __main__: Published blood pressure data. Subscribers: ['wearables/heart_rate/data/', 'wearables/blood_pressure/data/98/77']
+2025-10-14 23:36:55,169 [INFO] __main__: Application starting up.
+2025-10-14 23:36:57,171 [INFO] __main__: Published blood pressure data. Subscribers: ['wearables/heart_rate/data/']

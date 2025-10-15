@@ -1,0 +1,2 @@
+2025-10-14 23:56:45,775 [INFO] __main__: Application starting up.
+2025-10-14 23:56:47,778 [INFO] __main__: Published blood pressure data. Subscribers: ['wearables/heart_rate/data/']
