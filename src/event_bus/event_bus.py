@@ -53,6 +53,8 @@ class Event_Bus:
         self.mqttc.publish(event, message)
         print(f"Published message to event: {event} with message: {message}")
 
+    def notify():
+        pass
 
     # def on_subscribe(self, client, _userdata, mid, granted_qos, _properties):
     #     print(f"Subscribed: {mid} {granted_qos}")

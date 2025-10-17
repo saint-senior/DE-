@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS health_devices_db;

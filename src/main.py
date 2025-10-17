@@ -30,7 +30,10 @@ def run():
     bp_device.read_blood_pressure(msg)   
     logger.info(f"Published blood pressure data. Subscribers: {bp_device.subscribers}")
 
-
+# get variables
+# insert into device_details
+# devices.append({"device_id": 1, "type": "sensor", "status": "active", "user_id": "user_1"})
+# historical_data.append({"device_id": 1, "reading": 23, "timestamp": "2023-01-01T00:00:00Z", "type": "sensor", "status": "active", "user_id": "user_1"})
 
 if __name__ == "__main__":
     run()

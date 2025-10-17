@@ -1,0 +1,6 @@
+{"devices": [
+    {"device_id": 1, "type": "Heart Rate Monitor", "status": "connected", "user_id": "user_1"},
+    {"device_id": 2, "type": "Smartwatch", "status": "connected", "user_id": "user_2"},
+    {"device_id": 3, "type": "Blood Pressure Monitor", "status": "disconnected", "user_id": "user_3"}
+]
+}

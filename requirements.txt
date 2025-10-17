@@ -1,4 +1,6 @@
-paho-mqtt
-pytest
-pytest-mock
-datetime
+paho-mqtt==1.6.1
+pytest==7.1.2
+pytest-mock==3.8.2
+python-dotenv==0.20.0
+datetime==5.5
+pg8000==1.29.1
