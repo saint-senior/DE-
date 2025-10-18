@@ -49,9 +49,8 @@ This project simulates a network of wearable health devices and monitors their d
     ```bash
     sudo -u postgres psql
 
-    Then run the setup SQL script:
+    # Then run the setup SQL script:
 
-    ```bash
     \i src/db/setup-db.sql
 
 5. Verify database tables:
@@ -91,11 +90,9 @@ Tables:
 Example Queries:
 
 -- Last 10 heart rate readings
-```bash
 SELECT * FROM historical_data WHERE device_type='heart_rate_monitor' ORDER BY timestamp DESC LIMIT 10;
 
 -- Recent events
-```bash
 SELECT * FROM events ORDER BY id DESC LIMIT 10;
 
 
