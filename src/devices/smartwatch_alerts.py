@@ -1,19 +1,14 @@
-import random
 from time import sleep
-from event_bus.event_bus import Event_Bus
 
-class Smartwatch(Event_Bus):
+class Smartwatch:
+    def __init__(self, bus):
+        self.bus = bus
+
     def trigger_alert(self, reading):
-        """Simulates reading a heart rate value from a sensor."""
+        """Simulates sending a warning if heart rate exceeds threshold."""
         sleep(1)
         if reading > 80:
-            self.subscribe("wearables/heart_rate/alert")
-            self.publish("wearables/smartwatch/notification", "Warning: High Blood Pressure")
-            return self.on_message
-        # log warning
-
-# The sensor object is an instance of the class
-alert = Smartwatch()
-
-
-
+            self.bus.subscribe("wearables/heart_rate/data")
+            self.bus.publish("wearables/smartwatch/notification", "Warning: High Heart Rate")
+            return "Warning: High Heart Rate"
+        return "Normal Heart Rate"

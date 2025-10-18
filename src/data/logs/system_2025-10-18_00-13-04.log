@@ -1,0 +1,6 @@
+2025-10-18 00:13:04,174 [INFO] __main__: Application starting up.
+2025-10-18 00:13:04,882 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-18 00:13:05,885 [INFO] __main__: Heart rate reading: 82
+2025-10-18 00:13:06,890 [INFO] __main__: Smartwatch alert message: Warning: High Heart Rate
+2025-10-18 00:13:07,895 [INFO] __main__: Blood pressure reading complete.
+2025-10-18 00:13:07,895 [INFO] __main__: Data flow complete — check your database for updates!

@@ -1,0 +1,2 @@
+2025-10-17 23:49:48,763 [INFO] __main__: Application starting up.
+2025-10-17 23:49:49,259 [INFO] event_bus.event_bus: MQTT client initialized and loop started.

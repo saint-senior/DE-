@@ -1,0 +1,4 @@
+2025-10-17 23:45:45,774 [INFO] __main__: Application starting up.
+2025-10-17 23:45:47,154 [INFO] __main__: Heart rate reading: 91
+2025-10-17 23:45:48,157 [INFO] __main__: Smartwatch alert message: Warning: High Blood Pressure
+2025-10-17 23:45:49,165 [INFO] __main__: Published blood pressure data. Subscribers: ['wearables/heart_rate/data/', 'wearables/blood_pressure/data/119/68']

@@ -6,16 +6,16 @@ def seed():
     conn = connect_to_db()
 
     try:
-        conn.run(
-            "CREATE TABLE IF NOT EXISTS Events (\
-                event_id SERIAL PRIMARY KEY,\
-                event_type VARCHAR(40) NOT NULL,\
-                source_id VARCHAR(40) NOT NULL,\
-                target_id VARCHAR(40) NOT NULL,\
-                payload JSONB,\
-                timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP\
-            );"
-        )
+        conn.run("""
+            CREATE TABLE IF NOT EXISTS Events (
+                id SERIAL PRIMARY KEY,
+                event_type VARCHAR(40),
+                source_id INT,
+                target_id INT,
+                payload TEXT,
+                timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
         conn.run(
             "CREATE TABLE IF NOT EXISTS Devices (\
                 device_id SERIAL PRIMARY KEY,\
