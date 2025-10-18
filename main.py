@@ -39,11 +39,11 @@ def run():
     logger.info(f"Heart rate reading: {hr_reading}")
 
     # Trigger smartwatch alert if needed
-    msg = alert.trigger_alert(hr_reading)
-    logger.info(f"Smartwatch alert message: {msg}")
+    alert_msg = alert.trigger_alert(hr_reading)
+    logger.info(f"Smartwatch alert message: {alert_msg}")
 
     # Simulate blood pressure reading
-    bp_device.read_blood_pressure(msg)
+    bp_device.read_blood_pressure(alert_msg)
     logger.info("Blood pressure reading complete.")
 
     logger.info("Data flow complete — check your database for updates!")

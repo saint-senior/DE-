@@ -1,0 +1,19 @@
+2025-10-18 21:16:02,977 [INFO] __main__: Application starting up.
+2025-10-18 21:16:03,314 [INFO] event_bus.event_bus: MQTT client initialized and loop started.
+2025-10-18 21:16:03,394 [INFO] event_bus.event_bus: Connected to MQTT broker
+2025-10-18 21:16:03,395 [INFO] event_bus.event_bus: Subscribed to telemetry topics
+2025-10-18 21:16:04,318 [INFO] event_bus.event_bus: Published message to event: wearables/heart_rate/data with message: 102
+2025-10-18 21:16:04,319 [INFO] __main__: Heart rate reading: 102
+2025-10-18 21:16:04,428 [INFO] event_bus.event_bus: Message received | wearables/heart_rate/data → 102
+2025-10-18 21:16:04,713 [INFO] event_bus.event_bus: Stored numeric telemetry in Historical_Data
+2025-10-18 21:16:04,763 [INFO] event_bus.event_bus: Data stored successfully.
+2025-10-18 21:16:05,321 [INFO] event_bus.event_bus: Subscribed to event: wearables/heart_rate/data
+2025-10-18 21:16:05,322 [INFO] event_bus.event_bus: Published message to event: wearables/smartwatch/notification with message: Warning: High Heart Rate
+2025-10-18 21:16:05,322 [INFO] __main__: Smartwatch alert message: Warning: High Heart Rate
+2025-10-18 21:16:05,541 [INFO] event_bus.event_bus: Message received | wearables/smartwatch/notification → Warning: High Heart Rate
+2025-10-18 21:16:05,703 [WARNING] event_bus.event_bus: Skipping Historical_Data insert for non-numeric topic: wearables/smartwatch/notification
+2025-10-18 21:16:05,704 [INFO] event_bus.event_bus: Data stored successfully.
+2025-10-18 21:16:06,332 [INFO] event_bus.event_bus: Subscribed to event: wearables/heart_rate/data
+2025-10-18 21:16:06,332 [INFO] event_bus.event_bus: Published message to event: wearables/blood_pressure/data/110/60 with message: 110/60
+2025-10-18 21:16:06,333 [INFO] __main__: Blood pressure reading complete.
+2025-10-18 21:16:06,333 [INFO] __main__: Data flow complete — check your database for updates!

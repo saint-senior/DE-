@@ -17,9 +17,6 @@ class Event_Bus:
         self.mqttc.on_connect = self.on_connect
         self.mqttc.on_message = self.on_message
         self.mqttc.on_disconnect = self.on_disconnect  
-        # self.mqttc.on_subscribe = self.on_subscribe
-        # self.mqttc.on_unsubscribe = self.on_unsubscribe
-        # self.mqttc.on_publish = self.on_publish
         self.subscribers = []
         self.mqttc.connect(broker, port, keepalive)
         self.mqttc.loop_start()
@@ -28,23 +25,27 @@ class Event_Bus:
     def on_connect(self, client, _userdata, _flags, reason_code, _properties):
         if reason_code == 0:
             print("Connected to MQTT broker")
-
+            logger.info("Connected to MQTT broker")
             client.subscribe("wearables/heart_rate/data")
             client.subscribe("wearables/smartwatch/notification")
-            client.subscribe("wearables/blood_pressure/data/#")
+            client.subscribe("wearables/blood_pressure/data/")
+            logger.info("Subscribed to telemetry topics")
             print("Subscribed to telemetry topics")
         else:
+            logger.error(f"Failed to connect to MQTT broker, return code {reason_code}")
             print(f"Failed to connect, return code {reason_code}")
 
-        
     def on_disconnect(self, client, _userdata, _flags, reason_code, _properties):
         try:
             client.reconnect()
         except Exception as e:
+            logger.error(f"Reconnection failed: {e}")
             print(f"Reconnection failed: {e}")
+        logger.info(f"Disconnected from MQTT broker with result code {reason_code}")
         print(f"Disconnected with result code {reason_code}")
 
     def on_message(self, client, _userdata, msg):
+        logger.info(f"Message received | {msg.topic} → {msg.payload.decode()}")
         print(f"Message received | {msg.topic} → {msg.payload.decode()}")
         conn = connect_to_db()
 
@@ -55,11 +56,9 @@ class Event_Bus:
             topic_map = {
                 "wearables/heart_rate/data": 1,
                 "wearables/smartwatch/notification": 2,
-                # any blood pressure data topic starts with this
                 "wearables/blood_pressure/data": 3
             }
 
-            # Identify device by topic
             device_id = None
             for prefix, dev_id in topic_map.items():
                 if msg.topic.startswith(prefix):
@@ -72,7 +71,6 @@ class Event_Bus:
 
             payload = msg.payload.decode()
 
-            # Only numeric readings go into Historical_Data
             if msg.topic.startswith("wearables/heart_rate/data") or msg.topic.startswith("wearables/blood_pressure/data"):
                 conn.run(
                     """
@@ -85,8 +83,10 @@ class Event_Bus:
                     type=msg.topic.split("/")[1],
                     status="active"
                 )
+                logger.info("Stored numeric telemetry in Historical_Data")
                 print("Stored numeric telemetry in Historical_Data")
             else:
+                logger.warning(f"Skipping Historical_Data insert for non-numeric topic: {msg.topic}")
                 print(f"Skipping Historical_Data insert for non-numeric topic: {msg.topic}")
 
             # Check if the message represents an alert condition
@@ -121,10 +121,13 @@ class Event_Bus:
                     payload=msg.payload.decode(),
                     timestamp=timestamp
                 )
+                logger.info("Blood pressure reading logged in Events table.")
                 print("Blood pressure reading logged in Events table.")
 
+            logger.info("Data stored successfully.")
             print("Data stored successfully.")
         except Exception as e:
+            logger.error(f"Error inserting data: {e}")
             print(f"Error inserting data: {e}")
         finally:
             close_db_connection(conn)
@@ -133,21 +136,11 @@ class Event_Bus:
         self.subscribers.append(event)
         # if not in there, add it
         self.mqttc.subscribe(event)
+        logger.info(f"Subscribed to event: {event}")
         print(f"Subscribed to event: {event}")
 
     def publish(self, event, message = ""):
         self.mqttc.publish(event, message)
+        logger.info(f"Published message to event: {event} with message: {message}")
         print(f"Published message to event: {event} with message: {message}")
 
-    # def on_subscribe(self, client, _userdata, mid, granted_qos, _properties):
-    #     print(f"Subscribed: {mid} {granted_qos}")
-
-    # def on_publish(self, client, userdata, mid):
-    #     print(f"Message {mid} published.")
-
-    # def on_unsubscribe(self, client, userdata, mid):
-    #     print(f"Unsubscribed: {mid}")
-    #     client.disconnect()
-
-    # def loop_start():
-    #   pass
