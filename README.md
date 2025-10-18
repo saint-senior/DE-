@@ -31,7 +31,8 @@ This project simulates a network of wearable health devices and monitors their d
     cd <repo-folder>
 
 2. Create a .env file for database connection credentials:
-
+    
+    ```bash
     DB_HOST=localhost
     DB_PORT=5432
     DB_NAME=health_devices
@@ -40,18 +41,22 @@ This project simulates a network of wearable health devices and monitors their d
 
 3. Install Python dependencies:
 
+    ```bash
     pip install -r requirements.txt
 
 4. Set up PostgreSQL database:
 
+    ```bash
     sudo -u postgres psql
 
-Then run the setup SQL script:
+    Then run the setup SQL script:
 
+    ```bash
     \i src/db/setup-db.sql
 
 5. Verify database tables:
 
+    ```bash
     \c health_devices
     SELECT * FROM devices;
     SELECT * FROM historical_data ORDER BY timestamp DESC LIMIT 10;
@@ -86,9 +91,11 @@ Tables:
 Example Queries:
 
 -- Last 10 heart rate readings
+```bash
 SELECT * FROM historical_data WHERE device_type='heart_rate_monitor' ORDER BY timestamp DESC LIMIT 10;
 
 -- Recent events
+```bash
 SELECT * FROM events ORDER BY id DESC LIMIT 10;
 
 
