@@ -24,13 +24,13 @@ This project simulates a network of wearable health devices and monitors their d
 
 ## Setup
 
-1. **Create a .env file for database connection credentials:**
+1. Clone the repository:
 
-```bash
-git clone <repo-url>
-cd <repo-folder>
+    ```bash
+    git clone <repo-url>
+    cd <repo-folder>
 
-2. **Create a .env file for database connection credentials:**
+2. Create a .env file for database connection credentials:
 
 DB_HOST=localhost
 DB_PORT=5432
