@@ -32,30 +32,30 @@ This project simulates a network of wearable health devices and monitors their d
 
 2. Create a .env file for database connection credentials:
 
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=health_devices
-DB_USER=your_user
-DB_PASSWORD=your_password
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_NAME=health_devices
+    DB_USER=your_user
+    DB_PASSWORD=your_password
 
 3. Install Python dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 4. Set up PostgreSQL database:
 
-sudo -u postgres psql
+    sudo -u postgres psql
 
 Then run the setup SQL script:
 
-\i src/db/setup-db.sql
+    \i src/db/setup-db.sql
 
 5. Verify database tables:
 
-\c health_devices
-SELECT * FROM devices;
-SELECT * FROM historical_data ORDER BY timestamp DESC LIMIT 10;
-SELECT * FROM events ORDER BY id DESC LIMIT 10;
+    \c health_devices
+    SELECT * FROM devices;
+    SELECT * FROM historical_data ORDER BY timestamp DESC LIMIT 10;
+    SELECT * FROM events ORDER BY id DESC LIMIT 10;
 
 ---
 
